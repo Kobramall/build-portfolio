@@ -4,6 +4,7 @@ import Image from "next/image";
 import design from '../../public/skill-icon.jpg'
 import code from '../../public/file-icon.jpg';
 import consulting from '../../public/trophy-icon.png';
+import Img from '../../public/filler-image.png'
 import { useState } from 'react';
 
 function Portfolio(props) {
@@ -34,8 +35,8 @@ const {info} = props
              <a href={info.instagramLink}><AiFillInstagram /></a>
             <a href={info.facebookLink}><AiFillFacebook /></a>
           </div>
-          <div className='relative mx-auto  rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 '>
-            <Image src={info.photo} alt="filler"  layout="fill" objectFit='cover'/>
+          <div className='flex justify-center relative mx-auto  rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 '>
+            <Image src={Img} alt="filler" width={500} height={500}/>
           </div>
          </section>
           
@@ -68,7 +69,7 @@ const {info} = props
                  <p className='text-gray-800 py-1'>{info.skillsList3}</p>
                  <p className='text-gray-800 py-1'>etc.</p>
               </div>
-              <div className='bg-white text-center content-center shadow-lg p-10 rounded-xl my-10'>
+              <div className='flex flex-col bg-white text-center items-center shadow-lg p-10 rounded-xl my-10'>
                  <Image src={consulting} alt="design" width={100} height={100} />
                  <h3 className='text-lg font-medium pt-8 pb-2'>Achievements</h3>
                  <p className='py-2'>{info.achievementsDescription}</p>
